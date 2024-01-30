@@ -1,6 +1,6 @@
-console.log("hello2");
-let x = "vikash";
-alert(`hello ${x}`);
+// console.log("hello2");
+// let x = "vikash";
+// alert(`hello ${x}`);
 // ---- ----------- Variable Naming -------------------
 
 // Variable Name  CAN NEVER START WITH A NUMBER.
@@ -16,10 +16,10 @@ alert(`hello ${x}`);
 
 // Let Const Var
 
-let num = 12;
-num = 10000000; // this is allowed
-console.log(num);
-let names = "utkarsh";
+// let num = 12;
+// num = 10000000; // this is allowed
+// console.log(num);
+// let names = "utkarsh";
 
 // let char = "c";
 // let decision = true;
@@ -286,7 +286,6 @@ let names = "utkarsh";
 
 // 2. Pop ...
 
-const LastElement = arr.pop();
-console.log(LastElement); // true
-console.log(arr);
-
+// const LastElement = arr.pop();
+// console.log(LastElement); // true
+// console.log(arr);

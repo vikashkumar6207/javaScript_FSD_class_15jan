@@ -1,4 +1,4 @@
-console.log("functions");
+// console.log("functions");
 
 // {}, []
 
@@ -134,9 +134,15 @@ console.log("functions");
 
 // Example 2 ->
 
-if (true) {
-  var a = 100;
-  console.log(a, "answer 1");
-}
+// if (true) {
+//   var a = 100;
+//   console.log(a, "answer 1");
+// }
 
 // console.log(a, "ans 2");
+
+// const arr = [1, 2, 3, 4, 5];
+// arr.push(6);
+// console.log(arr); 
+let tenSquared = function(x) {return x*x;};
+console.log(tenSquared(2));
