@@ -144,62 +144,227 @@ console.log(arr, "original array After Splice");
 
 //
 
-// --------------- Doubts -------------------
+//  ------------------ Array Callback FUnctions --------------------
 
-// Q1
-let a = 10,
-  b = 10,
-  c = 10;
+// 1. ForEach
 
-if ((a == b) == c) {
-  console.log("hello");
-} else {
-  console.log("bye");
-}
+// let arr = [5, 8, 99, 100, 240, 6, 93, 64];
 
-// Q2
-// TODO:
-const fun = () => {
-  let a = (b = 0);
+// console.log(arr);
 
-  a++;
+// hey array FOR-EACH of your Member I want to do SOMETHING
 
-  return a;
-};
+// What is this something? ->
+// user will decide what he wants, he need to give a function for that.
 
-fun();
+// function satbeerWants(item) {
+//   alert(item + " satbeer wants");
+// }
 
-console.log(typeof a);
+// arr = ["hello", "world", "nice", "thisngs"];
 
-console.log(typeof b);
+// function utkarshWants(item, i) {
+//   console.log(item, i, "utkarsh want fuction");
+// }
 
-// Q3
-let x = [1, 2, 3]; // abc@123
+// arr.forEach(utkarshWants);
 
-let y = [1, 2, 3]; // abc@124
+// What is the Reponsibility of forEach.
+// 1. TO travel/traverse to each Item/element in array.
+// 2. TO execute the callbackFunction (utkarshWants, satbeerWants) for that perticulat Item.
 
-let z = y; //  abc@124
+/*
+  forEach Function must me like this 
 
-console.log(x == y); // false
+  function forEach( fn ) {
+    // Traveeling to the item
+    // By travvelling to item they know about item, index 
 
-console.log(x === y); // false
+    fn(item, index, arr);
 
-console.log(z == y); // true
+  }
 
-console.log(z == x); // false
+*/
 
-// Q4
+// 2.  map
 
-let num = 0;
+// const arr = [1, 2, 3, 4];
 
-function test() {
-  var num = 1;
+// questoin to tripple the Item of arr
 
-  return num;
-}
+// In inperative programming
+// for (let index = 0; index < arr.length; index++) {
+//   const element = arr[index];
+//   console.log(element * 3);
+// }
 
-console.log(test());
+// function uktrashTrippleFunction(item) {
+//   // return item * 3;
+// }
 
-console.log(num);
+// const mappedArray = arr.map(uktrashTrippleFunction);
 
-// 1 0
+// console.log(mappedArray, "mapped array 1");
+// console.log(arr, "original array");
+
+// Responsibility of Map.
+
+// 1. Responsibility of For Each
+// 2. Return the Array;
+
+// ----------------- Why this is used --------------------
+// 1. Imperative Programming
+// 2. Declarative Programming.
+
+// let arr1 = [1, 2, 3, 4, 5];
+
+//  Question is to double the elments of the array.
+// i have to take care of the whole execution. (Imperative Programming)
+
+// for (let index = 0; index < arr1.length; index++) {
+//   const element = arr1[index];
+//   console.log(2 * element, "slavery");
+// }
+
+// Work you are doing//
+// 1. Iteration for loop
+// 2. Doubling and printing.
+
+//2 . Declarative Programming.
+
+// As a manager I need to do some work .....
+//double the elments of the array. as a manager
+
+// arr1.forEach((item) => {
+//   console.log(2 * item, "forEach");
+// });
+
+// work done
+// 1. Doubling and printing.
+
+/*
+  map Function must me like this 
+
+  function map( fn ) {
+    cosnst arr []
+    // Traveeling to the item
+    // By travvelling to item they know about item, index 
+
+    const result = fn(item, index, arr);
+    arr.push(result)
+    return result
+
+  }
+
+*/
+
+// 3.  ------------------------ Filter --------------- ---
+
+// let arr = [19, 21, 29, 44, 1, 6, 3, 88];
+// arr = [1, 2, 3];
+
+// const filterdArray = arr.filter((item) => {
+//   // console.log(item, i, arr);
+//   if (item % 2 === 0) {
+//     // then only include item
+//     return true;
+//   } else {
+//     // exclude the item
+//     return false;
+//   }
+// });
+
+// console.log(filterdArray, "filtered array");
+// console.log(arr, "real array");
+
+// / 4.  ------ -------------- FIND --------------------
+
+// Returns the value of the first element in the array where predicate is true, and undefined otherwise.
+// gives back element if it is there.
+// it gives back the undefined
+
+// const item = [1, 2, 3, 4, 5, 6].find((item, index, array) => {
+//   return item === 99;
+// });
+// console.log(item, "item");
+
+// 5. --------------------- FInd Index ---------------
+// Returns the index of the first element in the array where predicate is true, and -1 otherwise.
+
+// const arr = [1, 2, 3, 4, 550, 6, 88, 99, 55];
+// const index = arr.findIndex((item, index, arr) => {
+//   return item === 55;
+// });
+// console.log(index, "returned index");
+
+// 6. -------------------------- FIND LAst -------------
+
+// const arr = [1, 2, 3, 4, 55, 6, 88, 99, 55];
+// const index = arr.findLastIndex((item, index, arr) => {
+//   return item === 55;
+// });
+
+// console.log(index, "find last item"); // 8
+
+/*
+  Algo for all of the above 
+  1. Traverse 
+  2. Call function fn (callback function) and store its value  fn(value, index, array/obj)
+  3. Process the value map, filter 
+  4. Return the Value from the function : map, filter( array) ; find, FindIndex (number) : forEach (undefined);
+*/
+
+// 7 . ------- REDUCE TODO: later in pollyfills --------------
+
+// Ask is to DO a summation ->
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// way 1 ->
+// let count = 0;
+// for (let index = 0; index < arr.length; index++) {
+//   const element = arr[index];
+//   count += element;
+// }
+
+// console.log(count, "for loop answer");
+
+// // Way 2 ->
+
+// const answer = arr.reduce((previosValue, current, index, array) => {
+//   return previosValue + current;
+// });
+
+// console.log(answer, "reduce answer");
+
+// 8. Concat
+
+// const array1 = ["a", "b", "c"];
+// const array2 = ["d", "e", "f"];
+// const array3 = array1.concat(array2);
+
+// console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+// 9. ---------  toString() Method ------
+// const obj = {
+//   name: "utkars",
+//   class: 9,
+// };
+
+// const answer = obj.toString();
+// console.log(answer); // '[object Object]'
+
+// console.log(JSON.stringify(obj)); // '{name: "utkars"class: 9,}'
+
+// let arr = [1, 2, 3, 4, 5];
+
+// console.log(arr.toString()); // "1,2,3,4,5";
+// console.log(JSON.stringify(arr)); // "[1,2,3,4,5]";
+
+//  ----------------- JOIN -----------
+
+// const arr = ["aero", "plane"];
+
+// arr.join(); // //aero,plane
+// arr.join(""); // //aeroplane
+// arr.join(" "); // //aero plane
