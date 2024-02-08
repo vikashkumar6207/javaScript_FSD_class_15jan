@@ -222,9 +222,9 @@
 
 
 // -----------------------xxxxxxxxxxxxxxxxxx-----------------------
-var headerTitle = document.getElementById('header-title');
+// var headerTitle = document.getElementById('header-title');
 // console.log(headerTitle);
-headerTitle.textContent = 'BignarCode';
+// headerTitle.textContent = 'BignarCode';
 // console.log(headerTitle);
 
 // headerTitle.innerText = 'Coder vikash';
@@ -249,5 +249,5 @@ headerTitle.textContent = 'BignarCode';
 // }
 
 
-var tag = document.getelementBysTagName('h2');
-   tag.style.color = 'acqa';
+// var tag = document.getelementBysTagName('h2');
+//    tag.style.color = 'acqa';
