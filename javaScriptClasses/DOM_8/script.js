@@ -247,7 +247,5 @@
 //    item[key].style.backgroundColor = 'yellow';
 
 // }
-
-
 // var tag = document.getelementBysTagName('h2');
 //    tag.style.color = 'acqa';

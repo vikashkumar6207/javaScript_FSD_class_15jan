@@ -142,7 +142,23 @@ console.log(arr, "original array After Splice");
 //   console.log(item, "for in"); // 0, 1, 2, 3, 4
 // }
 
-//
+
+// -------------------------Table making ---------------
+// var array = [
+//   ["vikash", 22, 'B.tech'],
+//   ["ravi", 21, 'B.com'],
+//   ["satish", 25, 'B.sc']
+// ];
+
+// document.write("<table border='1px' cellspacing='0px'>");
+// for(let a = 0;a<array.length;a++){
+//   document.write("<tr>");
+//   for(let b = 0;b<array[a].length;b++){
+//     document.write("<td>"+array[a][b]+"</td>")
+//   }
+//   document.write("</tr>");
+// }
+// document.write("</table>");
 
 //  ------------------ Array Callback FUnctions --------------------
 
