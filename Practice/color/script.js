@@ -31,8 +31,8 @@
 //     containerElement.style.background = color;
 // });
 
-const palletContainerElement = document.getElementById("palletContainer");
-const containerElement = document.getElementById("container");
+// const palletContainerElement = document.getElementById("palletContainer");
+// const containerElement = document.getElementById("container");
 
 
 // palletContainerElement.addEventListener("click", (event) => {
@@ -45,12 +45,35 @@ const containerElement = document.getElementById("container");
 //     containerElement.style.background = color;
 //   });
 
-  document.body.addEventListener("click", (event) => {
-    const element = event.target; // redbutton, greenbutton, yellowButton
+  // document.body.addEventListener("click", (event) => {
+  //   const element = event.target; // redbutton, greenbutton, yellowButton
   
-    console.log(element);
+  //   console.log(element);
   
-    const color = element.id;
+  //   const color = element.id;
   
-    containerElement.style.background = color;
-  });
+  //   containerElement.style.background = color;
+  // });
+
+  const nameElement = document.querySelector(".name");
+
+  const greenElement = document.querySelector(".green");
+  const blueElement = document.querySelector(".blue");
+  const redElement = document.querySelector(".red");
+  // console.dir("nameElement");
+  greenElement.addEventListener("click", ()=>{
+    const color = greenElement.className;
+    nameElement.style.color = color;  
+  })
+  
+  blueElement.addEventListener("click", ()=>{
+    const color = blueElement.className;
+    nameElement.style.color = color;
+  
+  })
+ 
+  redElement.addEventListener("click",()=>{
+    const color = redElement.className;
+    nameElement.style.color = color;
+  })
+  
