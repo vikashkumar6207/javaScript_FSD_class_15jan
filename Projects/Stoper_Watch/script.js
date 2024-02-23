@@ -24,6 +24,7 @@ stopBtn.addEventListener('click', function(){
 resetBtn.addEventListener('click', function(){    
     clearInterval(timerId);
     timerDisplay.innerHTML = `00 : 00 : 00`;
+    msec = secs = mins = 00;
     
 });
 
